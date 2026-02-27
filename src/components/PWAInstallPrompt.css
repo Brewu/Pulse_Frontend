@@ -1,0 +1,299 @@
+/* PWAInstallPrompt.css */
+
+.pwa-prompt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.pwa-prompt {
+  background: white;
+  border-radius: 28px;
+  padding: 32px 24px;
+  max-width: 320px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.4s ease;
+}
+
+.ios-prompt {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.ios-prompt .close-btn {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ios-prompt h3,
+.ios-prompt p {
+  color: white;
+}
+
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #999;
+  transition: all 0.3s ease;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.close-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+}
+
+.ios-prompt .close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.prompt-icon {
+  font-size: 64px;
+  text-align: center;
+  margin-bottom: 16px;
+  animation: bounce 2s infinite;
+}
+
+.pwa-prompt h3 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+}
+
+.pwa-prompt p {
+  margin: 0 0 24px;
+  color: #666;
+  font-size: 15px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.ios-instructions {
+  margin: 24px 0;
+}
+
+.instruction-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.step-number {
+  width: 28px;
+  height: 28px;
+  background: white;
+  color: #667eea;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.instruction-step span:last-child {
+  flex: 1;
+  font-size: 14px;
+}
+
+.share-icon {
+  display: inline-block;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  font-size: 18px;
+  margin-left: 4px;
+}
+
+.prompt-actions {
+  margin-top: 24px;
+}
+
+.dismiss-btn {
+  width: 100%;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dismiss-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Bottom prompt for Android */
+.pwa-prompt-bottom {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  animation: slideUp 0.4s ease;
+  max-width: 400px;
+  margin: 0 auto;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.prompt-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.prompt-app-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.prompt-text {
+  flex: 1;
+}
+
+.prompt-text h4 {
+  margin: 0 0 4px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.prompt-text p {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+}
+
+.install-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  white-space: nowrap;
+}
+
+.install-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.5);
+}
+
+.install-btn:active {
+  transform: translateY(0);
+}
+
+.close-btn-small {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+  padding: 4px 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.close-btn-small:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .pwa-prompt {
+    background: #1a1a1a;
+  }
+  
+  .pwa-prompt h3,
+  .prompt-text h4 {
+    color: #fff;
+  }
+  
+  .pwa-prompt p,
+  .prompt-text p {
+    color: #aaa;
+  }
+  
+  .pwa-prompt-bottom {
+    background: #2a2a2a;
+    border-color: #404040;
+  }
+  
+  .close-btn-small:hover {
+    background: #404040;
+    color: #fff;
+  }
+  
+  .prompt-text p {
+    color: #ccc;
+  }
+}
